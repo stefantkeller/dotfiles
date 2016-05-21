@@ -1,0 +1,7 @@
+[user]
+	name = Stefan Keller
+	email = stefantkeller@gmail.com
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
