@@ -33,6 +33,10 @@ set colorcolumn=90 " highlight column 90, soft indication of doc width
 " rebind <Leader> key
 let mapleader = ","
 vnoremap <Leader>s :sort<CR> " map sort function to a key (,s)
+" ,n == ^, i.e. 'home' more easily reachable
+" ,m == $, i.e. 'end' more easily reachable
+map <Leader>n ^" don't put a space between ^ and " of the command!
+map <Leader>m $
 
 " highlighting stuff in v and then moving it with '>' works only once
 " then it loses the selection
