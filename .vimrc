@@ -37,6 +37,8 @@ vnoremap <Leader>s :sort<CR> " map sort function to a key (,s)
 " ,m == $, i.e. 'end' more easily reachable
 map <Leader>n ^" don't put a space between ^ and " of the command!
 map <Leader>m $
+" after a search is done, turn off highlighting until next search using :noh
+map <Leader><Space> :noh<CR>
 
 " highlighting stuff in v and then moving it with '>' works only once
 " then it loses the selection
