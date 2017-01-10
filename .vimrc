@@ -29,6 +29,7 @@ syntax enable
 " line numbers and line lengths
 set number " show line numbers
 set colorcolumn=90 " highlight column 90, soft indication of doc width
+set laststatus=2 " always display some file information
 
 " rebind <Leader> key
 let mapleader = ","
@@ -54,3 +55,8 @@ set undolevels=700
 set nobackup
 set nowritebackup
 set noswapfile
+
+" plugins
+"
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
