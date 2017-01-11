@@ -1,4 +1,7 @@
 " Use Vim settings, rather than Vi settings (much better!).
+" For explanation of remapping etc. see
+" https://www.linux.com/news/vim-tips-using-vim-mappings-and-abbreviations
+"
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
@@ -55,6 +58,16 @@ set undolevels=700
 set nobackup
 set nowritebackup
 set noswapfile
+
+" activate spell check
+" https://www.linux.com/learn/using-spell-checking-vim
+" useage:
+" * cursor on word, type 'z=' to see list of suggested words
+" * add word to dictionary through 'zg' (use 'zw' to mark as incorrect)
+" note: to turn off use :set nospell (or remapped <Leader>q)
+" other possibility is e.g. spelllang=de_ch
+set spell spelllang=en_us
+map <Leader>q :set nospell<CR>
 
 " plugins
 "
