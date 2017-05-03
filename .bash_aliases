@@ -8,5 +8,4 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ldi='ls -d */'
 alias cl='clear'
-alias notizen='gedit ~/.notizzettel&'
-
+alias --='cd -'
