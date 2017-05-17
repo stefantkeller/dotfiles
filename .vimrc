@@ -28,6 +28,9 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax enable
+" display invisible characters (:set list! to toggle between showing them)
+" from http://stackoverflow.com/questions/1675688/make-vim-show-all-white-spaces-as-a-character
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " line numbers and line lengths
 set number " show line numbers
@@ -43,6 +46,8 @@ map <Leader>n ^" don't put a space between ^ and " of the command!
 map <Leader>m $
 " after a search is done, turn off highlighting until next search using :noh
 map <Leader><Space> :noh<CR>
+" toggle between showing invis chars (in listchars) with ,w (for whitespace)
+map <Leader>w :set list!<CR>
 
 " highlighting stuff in v and then moving it with '>' works only once
 " then it loses the selection
@@ -69,7 +74,11 @@ set noswapfile
 set spell spelllang=en_us
 map <Leader>q :set nospell<CR>
 
+" read externally changed files
+" from http://stackoverflow.com/questions/2490227/how-does-vims-autoread-work/20418591#20418591
+au FocusGained,BufEnter * :silent! !
+
 " plugins
 "
 " https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+" execute pathogen#infect()
