@@ -110,7 +110,34 @@ vnoremap <Leader>c "+y
 " 6. jump back to the q mark (`q)
 nnoremap <Leader>A mqggVG"+y`q
 
+" save folds in vim {{{
+" http://vim.wikia.com/wiki/VimTip991
+" also, as a reminder
+" (http://vim.wikia.com/wiki/Folding)
+" create folds using zf{movement}
+" open fold using zo
+" close fold (from within a fold) zc
+" hence, to create these .vimrc folds: zf/}}}
+" (except for this fold, because the closing mark in the explanation,
+" here a simple zf} because there is no emply line in the paragraph)
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+" }}}"
+
+" auto-close parentheses and the like {{{
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+"inoremap ' ''<left>" this one is annoying whenever writing English: you're', don't', etc.
+inoremap " ""<left>
+inoremap /* /**/<left><left>
+inoremap `` ``''<left><left>
+inoremap ` `'<left>
+" }}}
+
 " plugins
 "
 " https://github.com/tpope/vim-pathogen
-" execute pathogen#infect()
+execute pathogen#infect()
+
+" https://github.com/vim-airline/vim-airline
