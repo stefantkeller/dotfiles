@@ -132,7 +132,7 @@ inoremap { {}<left>
 inoremap " ""<left>
 inoremap /* /**/<left><left>
 inoremap `` ``''<left><left>
-inoremap ` `'<left>
+""inoremap ` `'<left>" this is handy iff in LaTeX, otherwise it's annoying
 " }}}
 
 " plugins
@@ -141,3 +141,4 @@ inoremap ` `'<left>
 execute pathogen#infect()
 
 " https://github.com/vim-airline/vim-airline
+" https://github.com/tpope/vim-abolish
